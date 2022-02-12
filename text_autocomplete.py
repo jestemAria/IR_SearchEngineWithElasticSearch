@@ -5,6 +5,8 @@ translator = Translator()
 
 
 def auto_complete(text):
+    """for auto completion the program uses wikipedia api and it returns the top 4 results in english
+    so google translate api will translate them back to persian"""
     final_suggests = []
     wikipedia_results = wikipedia.search(text, results=4)
     # print(wikipedia_results)
@@ -15,5 +17,3 @@ def auto_complete(text):
     print("پیشنهاد برای شما: ")
     for result in final_suggests:
         print(result + "\t")
-
-    # TODO: RETURN FALSE IF NO SUGGESTIONS
