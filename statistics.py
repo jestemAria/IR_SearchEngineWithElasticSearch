@@ -5,6 +5,7 @@ elastic_client = Elasticsearch()
 
 
 def analyze(response, text):
+    """this function separate the search query into words and then will calculate the TF-IDF for each word"""
     doc_frequency = 0
     term_frequency = 0
 
