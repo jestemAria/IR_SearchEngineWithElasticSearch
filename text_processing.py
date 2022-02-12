@@ -2,6 +2,7 @@ from parsivar import SpellCheck
 
 
 def correct_spelling(text):
+    """this function is used to correct spelling errors in a given text"""
     spell_checker = SpellCheck()
     corrected_text = spell_checker.spell_corrector(text)
     if corrected_text != text:
@@ -13,6 +14,7 @@ def correct_spelling(text):
 
 
 def clean_stop_words_in_query(text):
+    """this function is used to clean stop words in a given text"""
     stopword_list = []
 
     with open("stop_words.txt", encoding="utf-8") as stop_file:
@@ -38,6 +40,7 @@ def clean_stop_words_in_query(text):
 
 
 def substitute_persian_with_arabic(cleaned_text):
+    """this function is used to substitute persian with arabic in a given text"""
     for letter in cleaned_text:
         if letter == "ک":
             cleaned_text = cleaned_text.replace(letter, "ك")
@@ -45,4 +48,5 @@ def substitute_persian_with_arabic(cleaned_text):
             cleaned_text = cleaned_text.replace(letter, "ي")
     return cleaned_text
 
+"""for test you can test this text"""
 # correct_spelling("علی از  خاانه در تاریکی با ۲۲ کیلومتر صرعت بیرون می آید")
