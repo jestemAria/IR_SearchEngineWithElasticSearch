@@ -1,6 +1,7 @@
 from elasticsearch import Elasticsearch, helpers
 
 es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
+"""with options bellow we can specify settings and mapping manually for the index"""
 
 options = '''{
 "settings": {
