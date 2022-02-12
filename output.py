@@ -5,6 +5,9 @@ init()
 
 
 def show_result(json_data):
+    """this is a TUI for showing results, it's a function that takes a json_data and separate each part of it and
+    parse it to show it in a TUI"""
+
     took = get_took(json_data)
     timed_out = is_timed_out(json_data)
     no_result = has_not_any_result(json_data)
