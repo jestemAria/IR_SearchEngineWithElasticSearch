@@ -5,6 +5,9 @@ import text_processing
 import text_autocomplete
 elastic_client = Elasticsearch()
 
+"""this will start a search and it gives you suggestion for auto-complete until you type a space with the question
+    mark in persian"""
+
 while True:
     text = input("عبارت مورد نظر خود را وارد کنید: " + "\n")
 
@@ -18,7 +21,7 @@ while True:
 
 final_text = text_processing.correct_spelling(final_text)
 
-# Python dictionary object representing an Elasticsearch JSON query:
+"""Python dictionary object representing an Elasticsearch JSON query"""
 search_param = {
     "_source": ["TITLE", "TEXT"],
     "query": {
